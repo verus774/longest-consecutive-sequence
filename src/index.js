@@ -14,7 +14,10 @@ module.exports = function longestConsecutiveLength(array) {
         } else {
             counter = 1;
         }
-        longestCounter = Math.max(counter, longestCounter);
+
+        if (counter > longestCounter) {
+            longestCounter = counter;
+        }
     }
     return longestCounter;
 };
